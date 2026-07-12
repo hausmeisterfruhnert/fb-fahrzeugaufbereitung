@@ -77,7 +77,8 @@
       radial-gradient(700px 380px at 78% 8%,rgba(225,29,42,.28),transparent 60%),
       radial-gradient(600px 400px at 8% 90%,rgba(60,80,220,.14),transparent 60%);}
   .hero .wrap{position:relative;z-index:1}
-  .hero h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:900;margin-bottom:20px}
+  .hero h1{font-size:clamp(2.1rem,6vw,4rem);font-weight:900;margin-bottom:20px;overflow-wrap:break-word}
+  @media(max-width:560px){.hero h1{-webkit-hyphens:auto;hyphens:auto}}
   .hero p.sub{color:var(--muted);font-size:1.18rem;max-width:600px;margin-bottom:32px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
   .trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px}
@@ -248,6 +249,15 @@
     .foot{grid-template-columns:1fr}
     .hero-cta .btn{flex:1 1 auto;justify-content:center}
   }
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+  .tcard{background:linear-gradient(160deg,#1b1b22,#141419);border:1px solid var(--line);border-radius:16px;padding:24px 22px;display:flex;flex-direction:column;gap:12px}
+  .tstars{color:#ffb400;font-size:1.05rem;letter-spacing:3px;line-height:1}
+  .tquote{font-size:1.04rem;line-height:1.6;margin:0}
+  .tmeta{color:var(--muted);font-size:.85rem;font-weight:600;margin-top:6px;display:flex;align-items:center;gap:7px}
+  .trating-head{display:inline-flex;align-items:center;gap:10px;margin-top:10px;color:var(--muted);font-weight:600}
+  .trating-head b{color:var(--text);font-size:1.2rem}
+  .trating-head .tstars{font-size:1.15rem}
+  @media(max-width:820px){.tgrid{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}
 </style>
 <!--seo-->
 <meta name="keywords" content="Fahrzeugaufbereitung, Autoaufbereitung, KFZ-Aufbereitung, Fahrzeugpflege, Autopflege, Autoreinigung, Innenreinigung, Innenraumreinigung, Aussenreinigung, Autowaesche, Handwaesche, Lackaufbereitung, Lackpflege, Lackpolitur, Politur, Hochglanzpolitur, Kratzerentfernung, Nanoversiegelung, Keramikversiegelung, Keramikbeschichtung, Keramik Coating, Lackversiegelung, Felgenreinigung, Felgenreparatur, Felgenaufbereitung, Scheinwerferaufbereitung, Motorwaesche, Ozonbehandlung, Geruchsentfernung, Tierhaarentfernung, Lederpflege, Polsterreinigung, Sitzreinigung, Flugrostentfernung, Klimaanlagenreinigung, Smart Repair, Lackreparatur, Leasingrueckgabe, Leasingrücklaeufer, Gebrauchtwagenaufbereitung, Werbetechnik, Fahrzeugbeschriftung, Folierung, Textildruck, Car Detailing, Detailing, Autoaufbereitung Muenchen, Fahrzeugaufbereitung Schwabhausen, Autoaufbereitung Dachau, Fahrzeugaufbereitung Muenchen, Autopflege Muenchen, Schwabhausen, Dachau, Muenchen, Raum Muenchen, Landkreis Dachau, Karlsfeld, Bergkirchen, Oberbayern, FB Fahrzeugaufbereitung, Andreas Fruhnert">
@@ -298,6 +308,7 @@
   "München",
   "Raum München",
   "Landkreis Dachau",
+  "Olching",
   "Karlsfeld",
   "Bergkirchen",
   "Röhrmoos",
@@ -463,9 +474,9 @@
 <a id="top"></a>
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">Schwabhausen &amp; Umgebung</span>
-    <h1>Dein Auto in <span class="accent">Bestform.</span><br>Innen wie außen.</h1>
-    <p class="sub">Professionelle Fahrzeugaufbereitung mit Liebe zum Detail – von der Hochglanzpolitur über Keramikbeschichtung bis zur kompletten Innenraumreinigung. Individuell nach deinen Wünschen.</p>
+    <span class="eyebrow">Schwabhausen &amp; Raum München</span>
+    <h1>Professionelle<br><span class="accent">Fahrzeug&shy;aufbereitung</span> in Schwabhausen &amp; München</h1>
+    <p class="sub">Professionelle Autoaufbereitung mit Liebe zum Detail – dein Auto in Bestform, innen wie außen. Von der Hochglanzpolitur über Keramikbeschichtung bis zur kompletten Innenraumreinigung, individuell nach deinen Wünschen.</p>
     <div class="hero-cta">
       <a href="#kontakt" class="btn btn-primary">Jetzt Termin anfragen</a>
       <a href="https://wa.me/4917669681866" class="btn btn-wa" target="_blank" rel="noopener">
@@ -696,6 +707,7 @@
       <h2>Aus Leidenschaft für Fahrzeuge</h2>
       <p class="lead">Schon seit meinem 14. Lebensjahr dreht sich bei mir alles ums Auto – von Tuning bis Pflege. Aus dem Hobby ist FB Fahrzeugaufbereitung geworden: dein Ansprechpartner in Schwabhausen und im Raum München für Fahrzeugpflege mit einem echten Auge fürs Detail.</p>
       <p class="lead" style="margin-top:16px">Ich bin überzeugt, dass jedes Fahrzeug eigene Bedürfnisse hat. Deshalb bekommst du bei mir maßgeschneiderte Leistungen – genau das, was dein Fahrzeug wirklich braucht, ohne unnötige Extras. Qualität, Zuverlässigkeit und deine Zufriedenheit stehen für mich an erster Stelle.</p>
+      <p class="lead" style="margin-top:16px">Mein Einsatzgebiet reicht von Schwabhausen über Dachau, Karlsfeld, Bergkirchen und Röhrmoos bis nach Olching, Fürstenfeldbruck und in den gesamten Großraum München. Ob du aus dem Landkreis Dachau oder direkt aus München kommst – dein Fahrzeug wird bei mir mit dem gleichen Anspruch aufbereitet.</p>
       <div style="margin-top:26px;font-weight:700;font-size:1.08rem">Andreas Fruhnert <span style="color:var(--muted);font-weight:500">· Inhaber &amp; Geschäftsführer</span></div>
     </div>
     <div class="why-visual">
@@ -707,6 +719,47 @@
       <div class="brands" style="margin-top:22px">
         <a href="#kontakt" class="btn btn-primary">Jetzt Termin anfragen</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="bewertungen" class="steps">
+  <div class="wrap">
+    <span class="eyebrow">Kundenstimmen</span>
+    <h2>Das sagen unsere Kunden</h2>
+    <p class="lead">Unsere Arbeit spricht für sich – das bestätigen auch unsere Kundinnen und Kunden auf Google.</p>
+    <div class="trating-head"><span class="tstars">★★★★★</span> <b>4,5</b> aus 55 Google-Bewertungen</div>
+    <div class="tgrid">
+      <figure class="tcard">
+        <div class="tstars">★★★★★</div>
+        <blockquote class="tquote">„Professionelle Autoaufbereitung, sehr sauber und gründlich gereinigt."</blockquote>
+        <figcaption class="tmeta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb400"><path d="M12 2l3 6.9 7.6.6-5.8 5 1.8 7.4L12 18l-6.4 3.9 1.8-7.4L1.4 9.5 9 8.9z"/></svg>
+          Verifizierte Google-Bewertung
+        </figcaption>
+      </figure>
+      <figure class="tcard">
+        <div class="tstars">★★★★★</div>
+        <blockquote class="tquote">„Sehr guter und kompetenter Service – kann ich weiterempfehlen."</blockquote>
+        <figcaption class="tmeta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb400"><path d="M12 2l3 6.9 7.6.6-5.8 5 1.8 7.4L12 18l-6.4 3.9 1.8-7.4L1.4 9.5 9 8.9z"/></svg>
+          Verifizierte Google-Bewertung
+        </figcaption>
+      </figure>
+      <figure class="tcard">
+        <div class="tstars">★★★★★</div>
+        <blockquote class="tquote">„Das Auto war innerhalb eines Tages fertig und das Ergebnis ist perfekt!"</blockquote>
+        <figcaption class="tmeta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb400"><path d="M12 2l3 6.9 7.6.6-5.8 5 1.8 7.4L12 18l-6.4 3.9 1.8-7.4L1.4 9.5 9 8.9z"/></svg>
+          Verifizierte Google-Bewertung
+        </figcaption>
+      </figure>
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <a href="https://www.google.com/maps/place/FB+FAHRZEUGAUFBEREITUNG/@48.1897891,11.6424246,647m/data=!3m2!1e3!4b1!4m6!3m5!1s0x479dd94b1df88741:0xd8f53637c4108cec!8m2!3d48.1897856!4d11.6449995!16s%2Fg%2F11llrfl3sw" target="_blank" rel="noopener" class="reviews-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2l3 6.9 7.6.6-5.8 5 1.8 7.4L12 18l-6.4 3.9 1.8-7.4L1.4 9.5 9 8.9z"/></svg>
+        Alle 55 Google-Bewertungen ansehen
+      </a>
     </div>
   </div>
 </section>
@@ -728,7 +781,7 @@
       </div>
       <div class="row">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.4-7-11a7 7 0 0 1 14 0c0 5.6-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-        <div><b>Standort</b><p>Münchener Str. 4<br>85247 Schwabhausen</p></div>
+        <div><b>Standort</b><a href="https://www.google.com/maps/dir/?api=1&amp;destination=M%C3%BCnchener%20Stra%C3%9Fe%204%2C%2085247%20Schwabhausen" target="_blank" rel="noopener" aria-label="Route zur Münchener Straße 4, 85247 Schwabhausen planen">Münchener Str. 4<br>85247 Schwabhausen</a><span style="display:block;color:var(--accent);font-weight:700;font-size:.9rem;margin-top:3px">➜ Route planen</span></div>
       </div>
       <div class="row">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
