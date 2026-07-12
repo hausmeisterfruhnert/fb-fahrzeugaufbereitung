@@ -1,0 +1,46 @@
+FB FAHRZEUGAUFBEREITUNG – WEBSITE (fuer GitHub Pages)
+======================================================
+
+Diese Website ist statisch und laeuft auf GitHub Pages (kostenlos).
+Kein PHP noetig. Das Kontaktformular versendet ueber den kostenlosen Dienst
+FormSubmit direkt per E-Mail an info@fb-fahrzeugaufbereitung.de – ganz ohne
+dass beim Besucher ein E-Mail-Programm aufgeht.
+
+DATEIEN (alle ins Repository laden)
+-----------------------------------
+index.html · galerie.html · pakete.html · lackaufbereitung.html ·
+smart-repair.html · leasingrueckgabe.html · impressum.html ·
+datenschutz.html · robots.txt · sitemap.xml · .nojekyll
+(Die Datei .nojekyll ist leer und sorgt dafuer, dass GitHub die Dateien
+unveraendert ausliefert – bitte mit hochladen.)
+
+AUF GITHUB PAGES VEROEFFENTLICHEN
+---------------------------------
+1. Neues Repository anlegen und ALLE Dateien hochladen (auch .nojekyll).
+2. Settings -> Pages -> "Deploy from a branch" -> Branch: main, Ordner: / (root)
+   -> Save. Nach 1-2 Minuten ist die Seite unter
+   https://DEINNAME.github.io/REPO erreichbar.
+
+DEINE STRATO-DOMAIN DAVOR SCHALTEN (zwei Wege)
+----------------------------------------------
+A) Empfohlen (eigene Domain, mit HTTPS):
+   - GitHub: Settings -> Pages -> "Custom domain" -> fb-fahrzeugaufbereitung.de
+     eintragen (GitHub legt automatisch eine CNAME-Datei an).
+   - Strato: im DNS die Domain auf GitHub zeigen lassen
+     (A-Records auf 185.199.108.153, .109.153, .110.153, .111.153;
+      und CNAME "www" -> DEINNAME.github.io).
+   - In GitHub "Enforce HTTPS" aktivieren.
+B) Einfach (Weiterleitung):
+   - Bei Strato eine Domain-Weiterleitung auf deine
+     https://DEINNAME.github.io/REPO einrichten.
+
+KONTAKTFORMULAR AKTIVIEREN (einmalig)
+-------------------------------------
+Beim allerersten Absenden schickt FormSubmit eine Bestaetigungs-E-Mail an
+info@fb-fahrzeugaufbereitung.de. Einmal auf den Bestaetigungslink klicken –
+danach kommen alle Formular-Anfragen automatisch per E-Mail bei dir an.
+
+NOCH ZU ERLEDIGEN
+-----------------
+- Adresse im Google-Profil auf Schwabhausen umstellen.
+- Datenschutzerklaerung fachkundig pruefen lassen (jetzt mit GitHub & FormSubmit).

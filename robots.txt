@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.fb-fahrzeugaufbereitung.de/sitemap.xml

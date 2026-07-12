@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fahrzeugaufbereitung &amp; Autoaufbereitung Schwabhausen · München | FB</title>
+<meta name="description" content="Professionelle Fahrzeug- &amp; Autoaufbereitung im Raum München, Schwabhausen &amp; Dachau: Lackpolitur, Keramikversiegelung, Innen- &amp; Außenreinigung, Smart Repair, Felgen- &amp; Scheinwerferaufbereitung, Ozonbehandlung. Jetzt Termin anfragen!">
+<meta name="theme-color" content="#0e0e11">
+<style>
+  :root{
+    --bg:#0e0e11;
+    --bg-2:#15151a;
+    --card:#191920;
+    --card-2:#1f1f27;
+    --line:rgba(255,255,255,.08);
+    --text:#f4f4f6;
+    --muted:#a6a6b2;
+    --accent:#e11d2a;
+    --accent-2:#ff3b48;
+    --radius:16px;
+    --maxw:1140px;
+    --shadow:0 20px 50px rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .accent{color:var(--accent)}
+  section{padding:84px 0}
+  h1,h2,h3{line-height:1.15;letter-spacing:-.02em;font-weight:800}
+  h2{font-size:clamp(1.7rem,3.6vw,2.6rem);margin-bottom:14px}
+  .lead{color:var(--muted);font-size:1.06rem;max-width:640px}
+  .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.98rem;
+    padding:14px 26px;border-radius:999px;border:1px solid transparent;cursor:pointer;
+    transition:transform .15s ease,box-shadow .2s ease,background .2s ease;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;
+    box-shadow:0 12px 28px rgba(225,29,42,.35)}
+  .btn-ghost{background:rgba(255,255,255,.05);border-color:var(--line);color:var(--text)}
+  .btn-ghost:hover{background:rgba(255,255,255,.1)}
+  .btn-wa{background:#25D366;color:#0a2a16}
+  .btn-ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(14,14,17,.78);
+    backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.12rem;letter-spacing:-.02em}
+  .brand .mark{width:38px;height:38px;border-radius:10px;flex:none;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:grid;place-items:center;font-weight:900;color:#fff;font-size:.95rem;
+    box-shadow:0 8px 20px rgba(225,29,42,.4)}
+  .brand-head .logo-svg{height:42px;width:auto;display:block;color:var(--text)}
+  .brand-foot .logo-svg{height:92px;width:auto;display:block;color:var(--text)}
+  .brand-fallback{display:inline-flex;align-items:center;gap:11px}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{color:var(--muted);font-weight:500;font-size:.96rem;transition:color .15s}
+  .nav-links a:hover{color:var(--text)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .burger{display:none;background:none;border:0;color:var(--text);cursor:pointer;padding:8px}
+  .burger svg{width:26px;height:26px}
+
+  /* Hero */
+  .hero{position:relative;padding:96px 0 84px;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(700px 380px at 78% 8%,rgba(225,29,42,.28),transparent 60%),
+      radial-gradient(600px 400px at 8% 90%,rgba(60,80,220,.14),transparent 60%);}
+  .hero .wrap{position:relative;z-index:1}
+  .hero h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:900;margin-bottom:20px}
+  .hero p.sub{color:var(--muted);font-size:1.18rem;max-width:600px;margin-bottom:32px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px}
+  .trust div{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.95rem;font-weight:500}
+  .trust .ic{width:22px;height:22px;color:var(--accent);flex:none}
+
+  /* Stats bar */
+  .stats{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:38px 22px}
+  .stat{text-align:center}
+  .stat b{display:block;font-size:2rem;font-weight:900;letter-spacing:-.03em}
+  .stat span{color:var(--muted);font-size:.92rem}
+
+  /* Services */
+  .grid{display:grid;gap:20px}
+  .services-grid{grid-template-columns:repeat(3,1fr);margin-top:44px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px 26px;transition:transform .2s ease,border-color .2s ease,background .2s ease}
+  .card:hover{transform:translateY(-4px);border-color:rgba(225,29,42,.4);background:var(--card-2)}
+  .card .ico{width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;
+    background:rgba(225,29,42,.12);color:var(--accent)}
+  .card .ico svg{width:26px;height:26px}
+  .card h3{font-size:1.24rem;margin-bottom:9px}
+  .card p{color:var(--muted);font-size:.97rem}
+  .card ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:7px}
+  .card ul li{color:var(--muted);font-size:.93rem;display:flex;align-items:flex-start;gap:9px}
+  .card ul li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);
+    margin-top:8px;flex:none}
+  .price-badge{display:inline-block;font-size:1.5rem;font-weight:900;color:var(--accent);letter-spacing:-.02em;margin:2px 0 10px}
+  .price-note{color:var(--muted);font-size:.9rem;margin-top:26px}
+  .card.highlight{border-color:rgba(225,29,42,.5);background:var(--card-2)}
+  .tag-pop{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+    color:#fff;background:var(--accent);border-radius:999px;padding:3px 10px;margin-bottom:12px}
+  .card-link{display:inline-block;margin-top:16px;color:var(--accent);font-weight:600;font-size:.93rem}
+  .card-link:hover{text-decoration:underline}
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;align-items:start}
+  .tier{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 28px;position:relative}
+  .tier.feat{border-color:rgba(225,29,42,.55);background:var(--card-2);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  .tier .tname{font-size:1.4rem;font-weight:800;letter-spacing:-.01em}
+  .tier .tsub{color:var(--muted);font-size:.95rem;margin:5px 0 18px}
+  .tier .tprice{font-size:2.3rem;font-weight:900;color:var(--accent);letter-spacing:-.02em;line-height:1.1}
+  .tier .tprice small{display:block;color:var(--muted);font-size:.78rem;font-weight:600;letter-spacing:.02em;margin-top:3px}
+  .tier ul{list-style:none;margin:22px 0 26px;display:flex;flex-direction:column;gap:11px}
+  .tier ul li{color:var(--muted);font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+  .tier ul li svg{width:18px;height:18px;color:var(--accent);flex:none;margin-top:3px}
+  .tier .btn{width:100%;justify-content:center}
+  .tier .tpop{position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-size:.7rem;font-weight:800;
+    letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--accent);border-radius:999px;padding:5px 14px;white-space:nowrap}
+  @media(max-width:900px){.tiers{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}}
+
+  /* Steps */
+  .steps{background:var(--bg-2)}
+  .steps-grid{grid-template-columns:repeat(4,1fr);margin-top:44px}
+  .step{position:relative;padding:26px 22px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius)}
+  .step .num{font-size:2.4rem;font-weight:900;color:rgba(225,29,42,.55);line-height:1;margin-bottom:12px}
+  .step h3{font-size:1.1rem;margin-bottom:7px}
+  .step p{color:var(--muted);font-size:.93rem}
+
+  /* Why band */
+  .why .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .why ul{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:16px}
+  .why ul li{display:flex;gap:14px;align-items:flex-start}
+  .why ul li .ic{width:26px;height:26px;border-radius:8px;background:rgba(225,29,42,.14);
+    color:var(--accent);display:grid;place-items:center;flex:none;margin-top:2px}
+  .why ul li .ic svg{width:16px;height:16px}
+  .why ul li b{display:block;font-weight:600;margin-bottom:1px}
+  .why ul li span{color:var(--muted);font-size:.95rem}
+  .brands{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .brands .chip{border:1px solid var(--line);border-radius:999px;padding:9px 18px;
+    color:var(--muted);font-size:.9rem;font-weight:600;background:rgba(255,255,255,.03)}
+  .why-visual{background:linear-gradient(160deg,#1c1c24,#121217);border:1px solid var(--line);
+    border-radius:22px;padding:38px;box-shadow:var(--shadow)}
+  .why-visual .big{font-size:3.4rem;font-weight:900;letter-spacing:-.03em;
+    background:linear-gradient(135deg,#fff,var(--accent-2));-webkit-background-clip:text;
+    background-clip:text;-webkit-text-fill-color:transparent}
+  .why-visual .cap{color:var(--muted);margin-top:6px}
+  .why-visual hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+  .quote{font-size:1.12rem;font-weight:500;line-height:1.5}
+
+  /* Contact */
+  .contact{background:var(--bg-2)}
+  .contact .wrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:44px;align-items:start}
+  .contact-info .row{display:flex;gap:15px;align-items:flex-start;margin-bottom:22px}
+  .contact-info .row .ic{width:44px;height:44px;border-radius:12px;flex:none;
+    background:rgba(225,29,42,.12);color:var(--accent);display:grid;place-items:center}
+  .contact-info .row .ic svg{width:22px;height:22px}
+  .contact-info .row b{display:block;font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;
+    color:var(--muted);margin-bottom:3px;font-weight:700}
+  .contact-info .row a,.contact-info .row p{font-size:1.06rem;font-weight:600}
+  .quick{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+  form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:.9rem;font-weight:600;margin-bottom:7px}
+  .field input,.field select,.field textarea{width:100%;background:var(--bg);border:1px solid var(--line);
+    border-radius:11px;padding:13px 15px;color:var(--text);font-family:inherit;font-size:.97rem;transition:border-color .15s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+  .field textarea{resize:vertical;min-height:120px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form .btn-primary{width:100%;justify-content:center;margin-top:6px}
+  .form-note{color:var(--muted);font-size:.82rem;margin-top:12px;text-align:center}
+  .form-msg{display:none;padding:13px 16px;border-radius:11px;margin-bottom:18px;font-size:.95rem}
+  .form-msg.ok{display:block;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.4);color:#7ff0a8}
+  .form-msg.err{display:block;background:rgba(225,29,42,.12);border:1px solid rgba(225,29,42,.4);color:#ff8a92}
+
+  /* Footer */
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:52px 0 110px}
+  .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:36px}
+  .foot p{color:var(--muted);font-size:.95rem;margin-top:12px;max-width:320px}
+  .foot h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .foot a{display:block;color:var(--muted);font-size:.95rem;margin-bottom:10px;transition:color .15s}
+  .foot a:hover{color:var(--text)}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:12px;color:var(--muted);font-size:.86rem}
+
+  /* Mobile */
+  @media(max-width:900px){
+    .services-grid{grid-template-columns:1fr 1fr}
+    .steps-grid{grid-template-columns:1fr 1fr}
+    .why .wrap,.contact .wrap{grid-template-columns:1fr;gap:32px}
+    .stats .wrap{grid-template-columns:1fr 1fr}
+    .foot{grid-template-columns:1fr 1fr}
+  }
+  /* Weitere Leistungen (Extras) */
+  .extras{margin-top:44px;padding-top:32px;border-top:1px solid var(--line)}
+  .extras h3{font-size:1.2rem;font-weight:800;margin-bottom:6px}
+  .extras > p{color:var(--muted);font-size:.96rem;margin-bottom:18px;max-width:640px}
+  .extras .chips{display:flex;flex-wrap:wrap;gap:12px}
+  .extras .chips span{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:999px;
+    padding:10px 18px;color:var(--muted);font-size:.93rem;font-weight:500;background:rgba(255,255,255,.03)}
+  .extras .chips span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+  /* Floating action buttons */
+  .floating{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+  .fab{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.98rem;border-radius:999px;
+    box-shadow:0 12px 30px rgba(0,0,0,.45);transition:transform .15s ease}
+  .fab:hover{transform:translateY(-2px)}
+  .fab-wa{width:58px;height:58px;justify-content:center;background:#25D366;color:#0a2a16}
+  .fab-wa svg{width:30px;height:30px}
+  .fab-primary{padding:15px 24px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff}
+  .fab-primary svg{width:20px;height:20px}
+  /* Map */
+  .map-wrap{position:relative;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:34px}
+  .map-wrap iframe{width:100%;height:380px;border:0;display:block}
+  .map-consent{height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+    text-align:center;padding:26px;background:var(--bg-2);color:var(--muted)}
+  .map-consent p{max-width:440px;font-size:.96rem}
+  .map-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+    padding:18px 22px;background:var(--card);border-top:1px solid var(--line)}
+  .map-bar .adr{color:var(--muted);font-size:.96rem}
+  .map-bar .adr b{color:var(--text)}
+  .reviews-btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.95rem;padding:11px 20px;
+    border-radius:999px;background:#fff;color:#111;transition:transform .15s}
+  .reviews-btn:hover{transform:translateY(-2px)}
+  .reviews-btn svg{width:18px;height:18px;color:#f5b301}
+  @media(max-width:640px){
+    .fab-primary span{display:none}
+    .fab-primary{width:58px;height:58px;justify-content:center;padding:0}
+    .map-wrap iframe{height:300px}
+    section{padding:60px 0}
+    .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--bg-2);
+      flex-direction:column;padding:18px 22px;gap:16px;border-bottom:1px solid var(--line)}
+    .nav-links.open{display:flex}
+    .nav-links a{font-size:1.05rem}
+    .nav-cta .btn-ghost{display:none}
+    .burger{display:block}
+    .services-grid{grid-template-columns:1fr}
+    .steps-grid{grid-template-columns:1fr}
+    .two{grid-template-columns:1fr}
+    .foot{grid-template-columns:1fr}
+    .hero-cta .btn{flex:1 1 auto;justify-content:center}
+  }
+</style>
+<!--seo-->
+<meta name="keywords" content="Fahrzeugaufbereitung, Autoaufbereitung, KFZ-Aufbereitung, Fahrzeugpflege, Autopflege, Autoreinigung, Innenreinigung, Innenraumreinigung, Aussenreinigung, Autowaesche, Handwaesche, Lackaufbereitung, Lackpflege, Lackpolitur, Politur, Hochglanzpolitur, Kratzerentfernung, Nanoversiegelung, Keramikversiegelung, Keramikbeschichtung, Keramik Coating, Lackversiegelung, Felgenreinigung, Felgenreparatur, Felgenaufbereitung, Scheinwerferaufbereitung, Motorwaesche, Ozonbehandlung, Geruchsentfernung, Tierhaarentfernung, Lederpflege, Polsterreinigung, Sitzreinigung, Flugrostentfernung, Klimaanlagenreinigung, Smart Repair, Lackreparatur, Leasingrueckgabe, Leasingrücklaeufer, Gebrauchtwagenaufbereitung, Werbetechnik, Fahrzeugbeschriftung, Folierung, Textildruck, Car Detailing, Detailing, Autoaufbereitung Muenchen, Fahrzeugaufbereitung Schwabhausen, Autoaufbereitung Dachau, Fahrzeugaufbereitung Muenchen, Autopflege Muenchen, Schwabhausen, Dachau, Muenchen, Raum Muenchen, Landkreis Dachau, Karlsfeld, Bergkirchen, Oberbayern, FB Fahrzeugaufbereitung, Andreas Fruhnert">
+<meta name="author" content="FB Fahrzeugaufbereitung – Andreas Fruhnert">
+<meta name="geo.region" content="DE-BY">
+<meta name="geo.placename" content="Schwabhausen">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://www.fb-fahrzeugaufbereitung.de/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FB Fahrzeugaufbereitung">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Fahrzeugaufbereitung &amp; Autoaufbereitung Schwabhausen · München | FB">
+<meta property="og:description" content="Professionelle Fahrzeug- &amp; Autoaufbereitung im Raum München, Schwabhausen &amp; Dachau: Lackpolitur, Keramikversiegelung, Innen- &amp; Außenreinigung, Smart Repair, Felgen- &amp; Scheinwerferaufbereitung, Ozonbehandlung. Jetzt Termin anfragen!">
+<meta property="og:url" content="https://www.fb-fahrzeugaufbereitung.de/">
+<meta property="og:image" content="https://www.fb-fahrzeugaufbereitung.de/fb-porsche-911.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "AutoRepair",
+ "name": "FB Fahrzeugaufbereitung",
+ "image": "https://www.fb-fahrzeugaufbereitung.de/fb-porsche-911.jpg",
+ "logo": "https://www.fb-fahrzeugaufbereitung.de/fb-porsche-911.jpg",
+ "@id": "https://www.fb-fahrzeugaufbereitung.de/",
+ "url": "https://www.fb-fahrzeugaufbereitung.de/",
+ "telephone": "+4917669681866",
+ "email": "info@fb-fahrzeugaufbereitung.de",
+ "founder": "Andreas Fruhnert",
+ "priceRange": "€€",
+ "slogan": "Dein Auto in Bestform. Innen wie außen.",
+ "description": "Professionelle Fahrzeug- & Autoaufbereitung im Raum München, Schwabhausen & Dachau: Lackpolitur, Keramikversiegelung, Innen- & Außenreinigung, Smart Repair, Felgen- & Scheinwerferaufbereitung, Ozonbehandlung. Jetzt Termin anfragen!",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Münchener Straße 4",
+  "postalCode": "85247",
+  "addressLocality": "Schwabhausen",
+  "addressRegion": "Bayern",
+  "addressCountry": "DE"
+ },
+ "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": 48.3086,
+  "longitude": 11.3906
+ },
+ "areaServed": [
+  "Schwabhausen",
+  "Dachau",
+  "München",
+  "Raum München",
+  "Landkreis Dachau",
+  "Karlsfeld",
+  "Bergkirchen",
+  "Röhrmoos",
+  "Hebertshausen",
+  "Markt Indersdorf",
+  "Vierkirchen",
+  "Petershausen",
+  "Fürstenfeldbruck",
+  "Oberbayern"
+ ],
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday"
+   ],
+   "opens": "09:00",
+   "closes": "18:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Friday",
+   "opens": "09:00",
+   "closes": "15:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Saturday",
+   "opens": "09:00",
+   "closes": "13:00"
+  }
+ ],
+ "sameAs": [
+  "https://www.google.com/maps/place/FB+FAHRZEUGAUFBEREITUNG",
+  "https://www.instagram.com/fb_fahrzeugaufbereitung"
+ ],
+ "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Leistungen",
+  "itemListElement": [
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Lackaufbereitung"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Lackpolitur"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Keramikversiegelung"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Nanoversiegelung"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Innenraumreinigung"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Außenreinigung"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Komplettaufbereitung"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Smart Repair"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Felgenreparatur"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Scheinwerferaufbereitung"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Ozonbehandlung"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Leasingrückgabe-Aufbereitung"
+    }
+   }
+  ]
+ }
+}
+</script>
+<!--seo2--><meta name="geo.position" content="48.3086;11.3906"><meta name="ICBM" content="48.3086, 11.3906">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand brand-head" aria-label="FB Fahrzeugaufbereitung"><svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457 119" fill="currentColor" role="img" aria-label="FB Fahrzeugaufbereitung">
+<path transform="translate(21.55 93.07) scale(1.0000)" d="M8.45 -67.07 L55.11 -67.07 L55.11 -53.99 L25.75 -53.99 L25.75 -41.52 L53.37 -41.52 L53.37 -28.43 L25.75 -28.43 L25.75 -0.00 L8.45 -0.00 L8.45 -67.07 Z M98.15 -41.10 Q102.25 -41.10 104.35 -42.90 Q106.46 -44.69 106.46 -48.20 Q106.46 -51.66 104.35 -53.48 Q102.25 -55.30 98.15 -55.30 L88.59 -55.30 L88.59 -41.10 L98.15 -41.10 Z M98.74 -11.77 Q103.94 -11.77 106.57 -13.97 Q109.21 -16.17 109.21 -20.61 Q109.21 -24.98 106.60 -27.15 Q104.00 -29.34 98.74 -29.34 L88.59 -29.34 L88.59 -11.77 L98.74 -11.77 Z M114.83 -35.89 Q120.39 -34.27 123.44 -29.91 Q126.50 -25.56 126.50 -19.23 Q126.50 -9.53 119.94 -4.76 Q113.39 -0.00 99.99 -0.00 L71.30 -0.00 L71.30 -67.07 L97.26 -67.07 Q111.23 -67.07 117.50 -62.85 Q123.77 -58.62 123.77 -49.32 Q123.77 -44.43 121.47 -41.00 Q119.18 -37.56 114.83 -35.89 Z"/>
+<path d="M150.05 23.00 L151.74 32.30 L161.05 34.00 L151.74 35.70 L150.05 45.00 L148.35 35.70 L139.05 34.00 L148.35 32.30 Z"/>
+<rect x="182.0" y="32.0" width="3" height="55.1" rx="1.5"/>
+<path transform="translate(201.66 52.17) scale(1.0000)" d="M2.39 -18.96 L15.58 -18.96 L15.58 -15.26 L7.28 -15.26 L7.28 -11.73 L15.08 -11.73 L15.08 -8.04 L7.28 -8.04 L7.28 -0.00 L2.39 -0.00 L2.39 -18.96 Z M28.66 -3.45 L21.02 -3.45 L19.81 -0.00 L14.90 -0.00 L21.92 -18.96 L27.75 -18.96 L34.77 -0.00 L29.85 -0.00 L28.66 -3.45 Z M22.24 -6.97 L27.43 -6.97 L24.84 -14.51 L22.24 -6.97 Z M37.28 -18.96 L42.17 -18.96 L42.17 -11.73 L49.38 -11.73 L49.38 -18.96 L54.27 -18.96 L54.27 -0.00 L49.38 -0.00 L49.38 -8.04 L42.17 -8.04 L42.17 -0.00 L37.28 -0.00 L37.28 -18.96 Z M65.98 -10.55 Q67.52 -10.55 68.19 -11.12 Q68.85 -11.69 68.85 -13.00 Q68.85 -14.30 68.19 -14.85 Q67.52 -15.41 65.98 -15.41 L63.93 -15.41 L63.93 -10.55 L65.98 -10.55 Z M63.93 -7.17 L63.93 -0.00 L59.04 -0.00 L59.04 -18.96 L66.50 -18.96 Q70.25 -18.96 71.99 -17.70 Q73.74 -16.44 73.74 -13.72 Q73.74 -11.85 72.83 -10.64 Q71.92 -9.43 70.10 -8.86 Q71.10 -8.63 71.89 -7.82 Q72.69 -7.02 73.50 -5.38 L76.15 -0.00 L70.95 -0.00 L68.64 -4.71 Q67.94 -6.13 67.22 -6.65 Q66.50 -7.17 65.31 -7.17 L63.93 -7.17 Z M78.13 -18.96 L94.06 -18.96 L94.06 -16.00 L83.90 -3.69 L94.36 -3.69 L94.36 -0.00 L77.84 -0.00 L77.84 -2.96 L88.01 -15.26 L78.13 -15.26 L78.13 -18.96 Z M97.91 -18.96 L111.10 -18.96 L111.10 -15.26 L102.80 -15.26 L102.80 -11.73 L110.61 -11.73 L110.61 -8.04 L102.80 -8.04 L102.80 -3.69 L111.38 -3.69 L111.38 -0.00 L97.91 -0.00 L97.91 -18.96 Z M115.68 -18.96 L120.56 -18.96 L120.56 -7.59 Q120.56 -5.24 121.33 -4.23 Q122.10 -3.23 123.84 -3.23 Q125.59 -3.23 126.36 -4.23 Q127.12 -5.24 127.12 -7.59 L127.12 -18.96 L132.01 -18.96 L132.01 -7.59 Q132.01 -3.57 129.99 -1.60 Q127.98 0.37 123.84 0.37 Q119.71 0.37 117.69 -1.60 Q115.68 -3.57 115.68 -7.59 L115.68 -18.96 Z M153.82 -1.41 Q151.99 -0.52 150.03 -0.07 Q148.06 0.37 145.96 0.37 Q141.23 0.37 138.46 -2.28 Q135.69 -4.93 135.69 -9.46 Q135.69 -14.04 138.51 -16.67 Q141.33 -19.30 146.23 -19.30 Q148.12 -19.30 149.85 -18.94 Q151.59 -18.59 153.12 -17.89 L153.12 -13.97 Q151.54 -14.86 149.97 -15.31 Q148.40 -15.75 146.83 -15.75 Q143.91 -15.75 142.33 -14.12 Q140.75 -12.49 140.75 -9.46 Q140.75 -6.45 142.27 -4.81 Q143.80 -3.17 146.60 -3.17 Q147.36 -3.17 148.02 -3.27 Q148.67 -3.36 149.19 -3.57 L149.19 -7.25 L146.20 -7.25 L146.20 -10.53 L153.82 -10.53 L153.82 -1.41 Z"/>
+<path transform="translate(203.92 85.83) scale(1.0000)" d="M13.89 -3.45 L6.25 -3.45 L5.04 -0.00 L0.13 -0.00 L7.15 -18.96 L12.98 -18.96 L20.00 -0.00 L15.08 -0.00 L13.89 -3.45 Z M7.47 -6.97 L12.66 -6.97 L10.07 -14.51 L7.47 -6.97 Z M21.70 -18.96 L26.59 -18.96 L26.59 -7.59 Q26.59 -5.24 27.35 -4.23 Q28.12 -3.23 29.86 -3.23 Q31.61 -3.23 32.38 -4.23 Q33.15 -5.24 33.15 -7.59 L33.15 -18.96 L38.03 -18.96 L38.03 -7.59 Q38.03 -3.57 36.01 -1.60 Q34.00 0.37 29.86 0.37 Q25.73 0.37 23.71 -1.60 Q21.70 -3.57 21.70 -7.59 L21.70 -18.96 Z M42.81 -18.96 L56.00 -18.96 L56.00 -15.26 L47.70 -15.26 L47.70 -11.73 L55.51 -11.73 L55.51 -8.04 L47.70 -8.04 L47.70 -0.00 L42.81 -0.00 L42.81 -18.96 Z M68.16 -11.61 Q69.32 -11.61 69.91 -12.12 Q70.51 -12.63 70.51 -13.62 Q70.51 -14.60 69.91 -15.11 Q69.32 -15.63 68.16 -15.63 L65.46 -15.63 L65.46 -11.61 L68.16 -11.61 Z M68.33 -3.33 Q69.80 -3.33 70.54 -3.95 Q71.28 -4.57 71.28 -5.83 Q71.28 -7.06 70.55 -7.67 Q69.81 -8.29 68.33 -8.29 L65.46 -8.29 L65.46 -3.33 L68.33 -3.33 Z M72.87 -10.14 Q74.44 -9.69 75.31 -8.45 Q76.17 -7.22 76.17 -5.44 Q76.17 -2.69 74.32 -1.34 Q72.47 -0.00 68.68 -0.00 L60.57 -0.00 L60.57 -18.96 L67.91 -18.96 Q71.86 -18.96 73.63 -17.76 Q75.40 -16.57 75.40 -13.94 Q75.40 -12.56 74.75 -11.59 Q74.10 -10.62 72.87 -10.14 Z M80.39 -18.96 L93.58 -18.96 L93.58 -15.26 L85.28 -15.26 L85.28 -11.73 L93.08 -11.73 L93.08 -8.04 L85.28 -8.04 L85.28 -3.69 L93.86 -3.69 L93.86 -0.00 L80.39 -0.00 L80.39 -18.96 Z M105.09 -10.55 Q106.63 -10.55 107.29 -11.12 Q107.96 -11.69 107.96 -13.00 Q107.96 -14.30 107.29 -14.85 Q106.63 -15.41 105.09 -15.41 L103.04 -15.41 L103.04 -10.55 L105.09 -10.55 Z M103.04 -7.17 L103.04 -0.00 L98.15 -0.00 L98.15 -18.96 L105.61 -18.96 Q109.36 -18.96 111.10 -17.70 Q112.85 -16.44 112.85 -13.72 Q112.85 -11.85 111.94 -10.64 Q111.03 -9.43 109.20 -8.86 Q110.21 -8.63 111.00 -7.82 Q111.80 -7.02 112.61 -5.38 L115.26 -0.00 L110.06 -0.00 L107.75 -4.71 Q107.05 -6.13 106.33 -6.65 Q105.61 -7.17 104.42 -7.17 L103.04 -7.17 Z M118.17 -18.96 L131.36 -18.96 L131.36 -15.26 L123.06 -15.26 L123.06 -11.73 L130.87 -11.73 L130.87 -8.04 L123.06 -8.04 L123.06 -3.69 L131.64 -3.69 L131.64 -0.00 L118.17 -0.00 L118.17 -18.96 Z M135.93 -18.96 L140.82 -18.96 L140.82 -0.00 L135.93 -0.00 L135.93 -18.96 Z M143.34 -18.96 L160.81 -18.96 L160.81 -15.26 L154.53 -15.26 L154.53 -0.00 L149.64 -0.00 L149.64 -15.26 L143.34 -15.26 L143.34 -18.96 Z M163.34 -18.96 L168.23 -18.96 L168.23 -7.59 Q168.23 -5.24 168.99 -4.23 Q169.76 -3.23 171.50 -3.23 Q173.25 -3.23 174.02 -4.23 Q174.79 -5.24 174.79 -7.59 L174.79 -18.96 L179.68 -18.96 L179.68 -7.59 Q179.68 -3.57 177.66 -1.60 Q175.64 0.37 171.50 0.37 Q167.37 0.37 165.35 -1.60 Q163.34 -3.57 163.34 -7.59 L163.34 -18.96 Z M184.45 -18.96 L189.91 -18.96 L196.80 -5.96 L196.80 -18.96 L201.44 -18.96 L201.44 -0.00 L195.98 -0.00 L189.08 -13.00 L189.08 -0.00 L184.45 -0.00 L184.45 -18.96 Z M223.25 -1.41 Q221.42 -0.52 219.45 -0.07 Q217.49 0.37 215.39 0.37 Q210.65 0.37 207.89 -2.28 Q205.12 -4.93 205.12 -9.46 Q205.12 -14.04 207.93 -16.67 Q210.75 -19.30 215.66 -19.30 Q217.55 -19.30 219.28 -18.94 Q221.01 -18.59 222.55 -17.89 L222.55 -13.97 Q220.96 -14.86 219.39 -15.31 Q217.83 -15.75 216.25 -15.75 Q213.33 -15.75 211.75 -14.12 Q210.17 -12.49 210.17 -9.46 Q210.17 -6.45 211.70 -4.81 Q213.22 -3.17 216.02 -3.17 Q216.79 -3.17 217.44 -3.27 Q218.09 -3.36 218.61 -3.57 L218.61 -7.25 L215.63 -7.25 L215.63 -10.53 L223.25 -10.53 L223.25 -1.41 Z"/>
+</svg></a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#preise">Preise</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+4917669681866" class="btn btn-ghost">Anrufen</a>
+      <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
+      <button class="burger" id="burger" aria-label="Menü">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Schwabhausen &amp; Umgebung</span>
+    <h1>Dein Auto in <span class="accent">Bestform.</span><br>Innen wie außen.</h1>
+    <p class="sub">Professionelle Fahrzeugaufbereitung mit Liebe zum Detail – von der Hochglanzpolitur über Keramikbeschichtung bis zur kompletten Innenraumreinigung. Individuell nach deinen Wünschen.</p>
+    <div class="hero-cta">
+      <a href="#kontakt" class="btn btn-primary">Jetzt Termin anfragen</a>
+      <a href="https://wa.me/4917669681866" class="btn btn-wa" target="_blank" rel="noopener">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.5 1.1 2.6c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.1.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2m0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.3 8.3 0 1 1 12 20.3"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="trust">
+      <div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Keramik bis 36 Monate Schutz</div>
+      <div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Premium-Produkte: Sonax &amp; Koch-Chemie</div>
+      <div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Sorgfältige Handwäsche</div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>36 Mon.</b><span>Keramik-Schutz</span></div>
+    <div class="stat"><b>60–90 %</b><span>Kratzer entfernt</span></div>
+    <div class="stat"><b>100 %</b><span>Handarbeit</span></div>
+    <div class="stat"><b>A–Z</b><span>Komplettaufbereitung</span></div>
+  </div>
+</div>
+
+<section id="leistungen">
+  <div class="wrap">
+    <span class="eyebrow">Unsere Leistungen</span>
+    <h2>Alles für den perfekten Auftritt</h2>
+    <p class="lead">Ob Einzelleistung oder komplette Aufbereitung – wir passen die Pflege individuell an dein Fahrzeug und deine Wünsche an.</p>
+    <div class="grid services-grid">
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.9 2.9M16.2 16.2l2.9 2.9M2 12h4M18 12h4M4.9 19.1l2.9-2.9M16.2 7.8l2.9-2.9"/></svg></div>
+        <h3>Lackaufbereitung</h3>
+        <p>Für tiefen Glanz und geschützten Lack.</p>
+        <ul>
+          <li>Maschinelle Politur &amp; Kratzerentfernung (60–90 %)</li>
+          <li>Hochglanzpolitur mit Carnaubawachs</li>
+          <li>NANO-Versiegelung</li>
+          <li>Flugrostentfernung</li>
+        </ul>
+        <a class="card-link" href="lackaufbereitung.html">Mehr erfahren →</a>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7v6c0 5 3.8 8.3 9 9 5.2-.7 9-4 9-9V7l-9-5Z"/></svg></div>
+        <h3>Keramikbeschichtung</h3>
+        <p>Langzeitschutz mit Abperleffekt.</p>
+        <ul>
+          <li>Keramik-Coating bis 36 Monate Haltbarkeit</li>
+          <li>Schutz vor Umwelteinflüssen</li>
+          <li>Leichtere Reinigung im Alltag</li>
+          <li>Intensiver Farb- &amp; Tiefenglanz</li>
+        </ul>
+        <a class="card-link" href="lackaufbereitung.html">Mehr erfahren →</a>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 12l2-6h14l2 6M6 12v5M18 12v5M5 17h14"/></svg></div>
+        <h3>Innenraumreinigung</h3>
+        <p>Wie neu – bis in jede Ritze.</p>
+        <ul>
+          <li>Aussaugen &amp; Nassreinigung</li>
+          <li>Stoff-, Polster- &amp; Lederpflege</li>
+          <li>Tierhaare-Spezialreinigung</li>
+          <li>Ozon- &amp; Geruchsbehandlung</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l1-5h12l1 5M5 13h14v4H5zM7 17v2M17 17v2"/><circle cx="8" cy="15" r="0"/></svg></div>
+        <h3>Außenreinigung</h3>
+        <p>Gepflegt bis zur Felge.</p>
+        <ul>
+          <li>Schonende Handwäsche</li>
+          <li>Felgenreinigung &amp; -reparatur</li>
+          <li>Scheinwerferaufbereitung</li>
+          <li>Motorwäsche</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Komplettaufbereitung</h3>
+        <p>Das Rundum-Programm.</p>
+        <ul>
+          <li>Innen &amp; außen aus einer Hand</li>
+          <li>Leasingrückgabe-Aufbereitung</li>
+          <li>Aufbereitung vor dem Verkauf</li>
+          <li>Klimaanlagenreinigung</li>
+        </ul>
+        <a class="card-link" href="leasingrueckgabe.html">Mehr erfahren →</a>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 7l3 3M3 21l3-1 11-11-2-2L4 18l-1 3ZM17 4l2 2"/></svg></div>
+        <h3>Smart Repair &amp; Service</h3>
+        <p>Kleine Schäden, große Wirkung.</p>
+        <ul>
+          <li>Smart Repair &amp; Lackreparaturen</li>
+          <li>Scheinwerfer- &amp; Felgenaufbereitung</li>
+          <li>Ozon-/Geruchsbehandlung</li>
+          <li>Werbetechnik &amp; Textildruck</li>
+        </ul>
+        <a class="card-link" href="smart-repair.html">Mehr erfahren →</a>
+      </div>
+
+    </div>
+
+    <div class="extras">
+      <h3>Weitere Leistungen</h3>
+      <p>Diese Extras bieten wir zusätzlich an – sag einfach bei deiner Anfrage Bescheid, dann nehmen wir sie mit ins Angebot.</p>
+      <div class="chips">
+        <span>Flugrostentfernung</span>
+        <span>Motorwäsche</span>
+        <span>Scheinwerferaufbereitung</span>
+        <span>Felgenreparatur</span>
+        <span>Klimaanlagenreinigung</span>
+        <span>Ozon-/Geruchsbehandlung</span>
+        <span>Tierhaarentfernung</span>
+        <span>Leder- &amp; Polsterpflege</span>
+        <span>Gutscheine</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ablauf" class="steps">
+  <div class="wrap">
+    <span class="eyebrow">So läuft's ab</span>
+    <h2>In vier Schritten zum Glanz</h2>
+    <div class="grid steps-grid">
+      <div class="step"><div class="num">1</div><h3>Anfrage</h3><p>Melde dich per Telefon, WhatsApp, E-Mail oder Formular mit deinem Wunsch.</p></div>
+      <div class="step"><div class="num">2</div><h3>Beratung &amp; Angebot</h3><p>Wir schauen uns dein Fahrzeug an und machen dir ein passendes Angebot.</p></div>
+      <div class="step"><div class="num">3</div><h3>Aufbereitung</h3><p>Deine Wunschleistungen werden sorgfältig in Handarbeit umgesetzt.</p></div>
+      <div class="step"><div class="num">4</div><h3>Übergabe</h3><p>Du holst dein Fahrzeug in Bestform wieder ab – innen wie außen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="warum" class="why">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Warum FB Fahrzeugaufbereitung</span>
+      <h2>Qualität, die man sieht und fühlt</h2>
+      <p class="lead">Individuelle Fahrzeugpflege, speziell nach deinen Wünschen und Vorstellungen – mit hochwertigen Produkten und ehrlicher Handarbeit.</p>
+      <ul>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Individuell nach Wunsch</b><span>Jede Aufbereitung wird auf dein Fahrzeug abgestimmt.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Premium-Produkte</b><span>Wir arbeiten mit Marken wie Sonax und Koch-Chemie.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Sorgfältige Handarbeit</b><span>Keine Waschstraße – echte Detailarbeit von Hand.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Alles aus einer Hand</b><span>Von Politur über Innenreinigung bis Smart Repair.</span></div></li>
+      </ul>
+      <div class="brands">
+        <span class="chip">Sonax</span>
+        <span class="chip">Koch-Chemie</span>
+        <span class="chip">Keramik-Coating</span>
+        <span class="chip">NANO-Versiegelung</span>
+      </div>
+    </div>
+    <div class="why-visual">
+      <div class="big">36 Monate</div>
+      <div class="cap">Schutz durch professionelle Keramikbeschichtung</div>
+      <hr>
+      <p class="quote">„Dein Fahrzeug wird so gepflegt, als wäre es unser eigenes – innen wie außen, bis ins letzte Detail.“</p>
+      <div class="brands" style="margin-top:22px">
+        <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preise" class="steps">
+  <div class="wrap">
+    <span class="eyebrow">Pakete &amp; Preise</span>
+    <h2>Transparente Pakete für jedes Fahrzeug</h2>
+    <p class="lead">Wähle zwischen drei Paketen – Standard, Premium und Luxus. Der Endpreis richtet sich nach Fahrzeuggröße und Zustand; gerne machen wir dir ein individuelles Angebot.</p>
+    <div class="tiers">
+  <div class="tier">
+    <div class="tname">Standard</div>
+    <div class="tsub">Die solide Grundpflege – innen &amp; außen.</div>
+    <div class="tprice">ab 179 €<small>inkl. MwSt.</small></div>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Professionelle Handwäsche &amp; Felgenreinigung</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Innenraum &amp; Kofferraum saugen</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Armaturen, Konsole &amp; Kunststoff reinigen</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Fenster innen &amp; außen</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Kunststoffpflege</li>
+    </ul>
+    <a href="#kontakt" class="btn btn-ghost">Anfragen</a>
+  </div>
+  <div class="tier feat">
+    <span class="tpop">Beliebt</span>
+    <div class="tname">Premium</div>
+    <div class="tsub">Intensivreinigung mit Lackpolitur.</div>
+    <div class="tprice">ab 479 €<small>inkl. MwSt.</small></div>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Alles aus Standard – gründlicher</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Sitze, Polster &amp; Leder shampoonieren</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Fleckenentfernung im Innenraum</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Lack-Dekontamination (Insekten, Teer, Flugrost)</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> 1-Stufen-Lackpolitur + Schutzversiegelung</li>
+    </ul>
+    <a href="#kontakt" class="btn btn-primary">Anfragen</a>
+  </div>
+  <div class="tier">
+    <div class="tname">Luxus</div>
+    <div class="tsub">Komplettaufbereitung mit Keramik.</div>
+    <div class="tprice">ab 799 €<small>inkl. MwSt.</small></div>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Intensive Innen- &amp; Außenaufbereitung</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Mehrstufige Lackpolitur</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Keramikversiegelung – Langzeitschutz</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Scheiben- &amp; Felgenversiegelung</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Finale Politur &amp; Feinabstimmung</li>
+    </ul>
+    <a href="#kontakt" class="btn btn-ghost">Anfragen</a>
+  </div>
+</div>
+    <p class="price-note">Alle Preise inkl. 19 % MwSt., „ab“-Preise für normale bis mittlere Verschmutzung. Der genaue Preis hängt von Fahrzeuggröße (Kleinwagen bis SUV/Minibus) und Zustand ab. Einzelleistungen wie Ozonbehandlung, Tierhaarentfernung oder Motorwäsche gerne auf Anfrage.</p>
+    <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap"><a href="pakete.html" class="btn btn-primary">Alle Pakete &amp; Preise ansehen</a><a href="#kontakt" class="btn btn-ghost">Individuelles Angebot anfragen</a></div>
+  </div>
+</section>
+
+<section id="ueber-uns" class="why">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Über uns</span>
+      <h2>Aus Leidenschaft für Fahrzeuge</h2>
+      <p class="lead">Schon seit meinem 14. Lebensjahr dreht sich bei mir alles ums Auto – von Tuning bis Pflege. Aus dem Hobby ist FB Fahrzeugaufbereitung geworden: dein Ansprechpartner in Schwabhausen und im Raum München für Fahrzeugpflege mit einem echten Auge fürs Detail.</p>
+      <p class="lead" style="margin-top:16px">Ich bin überzeugt, dass jedes Fahrzeug eigene Bedürfnisse hat. Deshalb bekommst du bei mir maßgeschneiderte Leistungen – genau das, was dein Fahrzeug wirklich braucht, ohne unnötige Extras. Qualität, Zuverlässigkeit und deine Zufriedenheit stehen für mich an erster Stelle.</p>
+      <div style="margin-top:26px;font-weight:700;font-size:1.08rem">Andreas Fruhnert <span style="color:var(--muted);font-weight:500">· Inhaber &amp; Geschäftsführer</span></div>
+    </div>
+    <div class="why-visual">
+      <img src="data:image/jpeg;base64,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" alt="Andreas Fruhnert – Inhaber FB Fahrzeugaufbereitung" style="width:100%;max-width:260px;border-radius:16px;display:block;margin:0 auto 22px;border:1px solid var(--line)" loading="lazy">
+      <div class="big">seit ’14.</div>
+      <div class="cap">Lebensjahr Leidenschaft für Fahrzeuge, Tuning &amp; Pflege</div>
+      <hr>
+      <p class="quote">„Dein Fahrzeug wird bei mir so gepflegt, als wäre es mein eigenes.“</p>
+      <div class="brands" style="margin-top:22px">
+        <a href="#kontakt" class="btn btn-primary">Jetzt Termin anfragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="contact">
+  <div class="wrap">
+    <div class="contact-info">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Termin anfragen</h2>
+      <p class="lead" style="margin-bottom:30px">Schreib oder ruf uns an – wir melden uns schnellstmöglich mit einem Angebot bei dir.</p>
+
+      <div class="row">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+        <div><b>Telefon</b><a href="tel:+4917669681866">0176 69681866</a></div>
+      </div>
+      <div class="row">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM4 6l8 6 8-6"/></svg></span>
+        <div><b>E-Mail</b><a href="mailto:info@fb-fahrzeugaufbereitung.de">info@fb-fahrzeugaufbereitung.de</a></div>
+      </div>
+      <div class="row">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.4-7-11a7 7 0 0 1 14 0c0 5.6-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <div><b>Standort</b><p>Münchener Str. 4<br>85247 Schwabhausen</p></div>
+      </div>
+      <div class="row">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <div><b>Öffnungszeiten</b><p>Mo–Do 9–18 Uhr · Fr 9–15 Uhr<br>Sa 9–13 Uhr · So geschlossen</p></div>
+      </div>
+
+      <div class="quick">
+        <a href="tel:+4917669681866" class="btn btn-primary">Anrufen</a>
+        <a href="https://wa.me/4917669681866" class="btn btn-wa" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:info@fb-fahrzeugaufbereitung.de" class="btn btn-ghost">E-Mail</a>
+        <a href="https://www.instagram.com/fb_fahrzeugaufbereitung" target="_blank" rel="noopener" class="btn btn-ig"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.37 1.06.42 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.42 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.17-1.06.37-2.23.42-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.06-.37 2.23-.42C8.42 2.21 8.8 2.2 12 2.2Zm0 3.06A6.74 6.74 0 1 0 12 18.74 6.74 6.74 0 0 0 12 5.26Zm0 1.8a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88Zm5.15-3.3a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"/></svg> Instagram</a>
+      </div>
+    </div>
+
+    <form id="contactForm" action="https://formsubmit.co/ajax/info@fb-fahrzeugaufbereitung.de" method="post">
+      <div class="form-msg" id="formMsg"></div>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
+      <input type="hidden" name="_subject" value="Neue Anfrage über die Website – FB Fahrzeugaufbereitung">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="two">
+        <div class="field"><label for="name">Name *</label><input type="text" id="name" name="name" required></div>
+        <div class="field"><label for="phone">Telefon</label><input type="tel" id="phone" name="phone"></div>
+      </div>
+      <div class="field"><label for="email">E-Mail *</label><input type="email" id="email" name="email" required></div>
+      <div class="field"><label for="service">Gewünschte Leistung</label>
+        <select id="service" name="service">
+          <option value="">Bitte wählen …</option>
+          <option>Lackaufbereitung / Politur</option>
+          <option>Keramikbeschichtung</option>
+          <option>Innenraumreinigung</option>
+          <option>Außenreinigung</option>
+          <option>Komplettaufbereitung</option>
+          <option>Leasingrückgabe</option>
+          <option>Smart Repair</option>
+          <option>Sonstiges</option>
+        </select>
+      </div>
+      <div class="field"><label for="message">Nachricht *</label><textarea id="message" name="message" placeholder="Fahrzeug, Zustand und dein Wunsch …" required></textarea></div>
+      <button type="submit" class="btn btn-primary">Anfrage senden</button>
+      <p class="form-note">* Pflichtfelder. Mit dem Absenden stimmst du der Verarbeitung deiner Daten zur Bearbeitung der Anfrage zu.</p>
+    </form>
+  </div>
+  <div class="wrap">
+    <div class="map-wrap">
+      <div class="map-consent" id="mapConsent">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:40px;height:40px;color:var(--accent)"><path d="M12 21s-7-5.4-7-11a7 7 0 0 1 14 0c0 5.6-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <p>Zum Schutz deiner Daten wird die Google-Maps-Karte erst nach deiner Zustimmung geladen. Dabei werden Daten an Google übertragen.</p>
+        <button type="button" class="btn btn-primary" onclick="ladeKarte()">Karte anzeigen</button>
+      </div>
+      <div class="map-bar">
+        <div class="adr"><b>FB Fahrzeugaufbereitung</b> · Münchener Straße 4, 85247 Schwabhausen</div>
+        <a href="https://www.google.com/maps/place/FB+FAHRZEUGAUFBEREITUNG/@48.1897891,11.6424246,647m/data=!3m2!1e3!4b1!4m6!3m5!1s0x479dd94b1df88741:0xd8f53637c4108cec!8m2!3d48.1897856!4d11.6449995!16s%2Fg%2F11llrfl3sw" target="_blank" rel="noopener" class="reviews-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.6.6-5.8 5 1.8 7.4L12 18l-6.4 3.9 1.8-7.4L1.4 9.5 9 8.9z"/></svg>
+          Google-Bewertungen ansehen
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="brand brand-foot" aria-label="FB Fahrzeugaufbereitung"><svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 325" fill="currentColor" role="img" aria-label="FB Fahrzeugaufbereitung">
+<path d="M260.00 40.00 L264.95 69.05 L294.00 74.00 L264.95 78.95 L260.00 108.00 L255.05 78.95 L226.00 74.00 L255.05 69.05 Z"/>
+<path transform="translate(186.66 214.91) scale(1.0000)" d="M9.19 -72.91 L59.91 -72.91 L59.91 -58.69 L27.98 -58.69 L27.98 -45.12 L58.02 -45.12 L58.02 -30.91 L27.98 -30.91 L27.98 -0.00 L9.19 -0.00 L9.19 -72.91 Z M106.69 -44.67 Q111.14 -44.67 113.42 -46.62 Q115.72 -48.58 115.72 -52.39 Q115.72 -56.16 113.42 -58.12 Q111.14 -60.11 106.69 -60.11 L96.29 -60.11 L96.29 -44.67 L106.69 -44.67 Z M107.33 -12.80 Q112.98 -12.80 115.84 -15.19 Q118.70 -17.58 118.70 -22.41 Q118.70 -27.16 115.87 -29.52 Q113.04 -31.89 107.33 -31.89 L96.29 -31.89 L96.29 -12.80 L107.33 -12.80 Z M124.81 -39.02 Q130.86 -37.25 134.17 -32.52 Q137.50 -27.78 137.50 -20.91 Q137.50 -10.36 130.37 -5.17 Q123.25 -0.00 108.69 -0.00 L77.50 -0.00 L77.50 -72.91 L105.72 -72.91 Q120.90 -72.91 127.72 -68.31 Q134.53 -63.72 134.53 -53.61 Q134.53 -48.30 132.03 -44.56 Q129.54 -40.83 124.81 -39.02 Z"/>
+<rect x="225.0" y="244.9" width="70" height="3" rx="1.5"/>
+<path transform="translate(73.91 284.75) scale(1.0000)" d="M1.84 -14.58 L11.98 -14.58 L11.98 -11.74 L5.60 -11.74 L5.60 -9.03 L11.60 -9.03 L11.60 -6.18 L5.60 -6.18 L5.60 -0.00 L1.84 -0.00 L1.84 -14.58 Z M28.34 -2.66 L22.46 -2.66 L21.53 -0.00 L17.75 -0.00 L23.15 -14.58 L27.64 -14.58 L33.04 -0.00 L29.26 -0.00 L28.34 -2.66 Z M23.40 -5.36 L27.39 -5.36 L25.40 -11.16 L23.40 -5.36 Z M38.97 -14.58 L42.73 -14.58 L42.73 -9.03 L48.27 -9.03 L48.27 -14.58 L52.03 -14.58 L52.03 -0.00 L48.27 -0.00 L48.27 -6.18 L42.73 -6.18 L42.73 -0.00 L38.97 -0.00 L38.97 -14.58 Z M65.04 -8.12 Q66.22 -8.12 66.73 -8.55 Q67.25 -8.99 67.25 -10.00 Q67.25 -11.00 66.73 -11.43 Q66.22 -11.86 65.04 -11.86 L63.46 -11.86 L63.46 -8.12 L65.04 -8.12 Z M63.46 -5.52 L63.46 -0.00 L59.70 -0.00 L59.70 -14.58 L65.44 -14.58 Q68.32 -14.58 69.66 -13.61 Q71.01 -12.65 71.01 -10.56 Q71.01 -9.11 70.31 -8.18 Q69.61 -7.26 68.20 -6.82 Q68.97 -6.64 69.58 -6.02 Q70.20 -5.40 70.82 -4.14 L72.86 -0.00 L68.86 -0.00 L67.08 -3.62 Q66.54 -4.72 65.99 -5.12 Q65.44 -5.52 64.52 -5.52 L63.46 -5.52 Z M78.38 -14.58 L90.63 -14.58 L90.63 -12.31 L82.81 -2.84 L90.86 -2.84 L90.86 -0.00 L78.16 -0.00 L78.16 -2.27 L85.98 -11.74 L78.38 -11.74 L78.38 -14.58 Z M97.59 -14.58 L107.73 -14.58 L107.73 -11.74 L101.35 -11.74 L101.35 -9.03 L107.36 -9.03 L107.36 -6.18 L101.35 -6.18 L101.35 -2.84 L107.95 -2.84 L107.95 -0.00 L97.59 -0.00 L97.59 -14.58 Z M115.25 -14.58 L119.01 -14.58 L119.01 -5.84 Q119.01 -4.03 119.60 -3.26 Q120.19 -2.48 121.52 -2.48 Q122.87 -2.48 123.46 -3.26 Q124.05 -4.03 124.05 -5.84 L124.05 -14.58 L127.81 -14.58 L127.81 -5.84 Q127.81 -2.74 126.26 -1.23 Q124.71 0.28 121.52 0.28 Q118.35 0.28 116.80 -1.23 Q115.25 -2.74 115.25 -5.84 L115.25 -14.58 Z M148.58 -1.08 Q147.18 -0.40 145.66 -0.06 Q144.15 0.28 142.54 0.28 Q138.90 0.28 136.77 -1.75 Q134.64 -3.79 134.64 -7.28 Q134.64 -10.80 136.81 -12.82 Q138.97 -14.84 142.75 -14.84 Q144.20 -14.84 145.53 -14.57 Q146.86 -14.30 148.05 -13.76 L148.05 -10.74 Q146.83 -11.43 145.62 -11.78 Q144.41 -12.12 143.20 -12.12 Q140.96 -12.12 139.74 -10.86 Q138.53 -9.61 138.53 -7.28 Q138.53 -4.96 139.70 -3.70 Q140.87 -2.44 143.03 -2.44 Q143.61 -2.44 144.12 -2.51 Q144.62 -2.59 145.02 -2.74 L145.02 -5.58 L142.72 -5.58 L142.72 -8.10 L148.58 -8.10 L148.58 -1.08 Z M164.74 -2.66 L158.86 -2.66 L157.93 -0.00 L154.15 -0.00 L159.55 -14.58 L164.03 -14.58 L169.43 -0.00 L165.66 -0.00 L164.74 -2.66 Z M159.80 -5.36 L163.79 -5.36 L161.80 -11.16 L159.80 -5.36 Z M175.36 -14.58 L179.12 -14.58 L179.12 -5.84 Q179.12 -4.03 179.71 -3.26 Q180.30 -2.48 181.64 -2.48 Q182.99 -2.48 183.58 -3.26 Q184.17 -4.03 184.17 -5.84 L184.17 -14.58 L187.93 -14.58 L187.93 -5.84 Q187.93 -2.74 186.38 -1.23 Q184.83 0.28 181.64 0.28 Q178.47 0.28 176.91 -1.23 Q175.36 -2.74 175.36 -5.84 L175.36 -14.58 Z M195.60 -14.58 L205.74 -14.58 L205.74 -11.74 L199.36 -11.74 L199.36 -9.03 L205.36 -9.03 L205.36 -6.18 L199.36 -6.18 L199.36 -0.00 L195.60 -0.00 L195.60 -14.58 Z M219.09 -8.93 Q219.98 -8.93 220.44 -9.33 Q220.90 -9.72 220.90 -10.48 Q220.90 -11.23 220.44 -11.62 Q219.98 -12.02 219.09 -12.02 L217.01 -12.02 L217.01 -8.93 L219.09 -8.93 Z M219.22 -2.56 Q220.35 -2.56 220.92 -3.04 Q221.49 -3.52 221.49 -4.48 Q221.49 -5.43 220.93 -5.90 Q220.36 -6.38 219.22 -6.38 L217.01 -6.38 L217.01 -2.56 L219.22 -2.56 Z M222.72 -7.80 Q223.93 -7.45 224.59 -6.50 Q225.25 -5.56 225.25 -4.18 Q225.25 -2.07 223.83 -1.03 Q222.40 -0.00 219.49 -0.00 L213.25 -0.00 L213.25 -14.58 L218.90 -14.58 Q221.93 -14.58 223.30 -13.66 Q224.66 -12.74 224.66 -10.72 Q224.66 -9.66 224.16 -8.91 Q223.66 -8.17 222.72 -7.80 Z M232.49 -14.58 L242.64 -14.58 L242.64 -11.74 L236.25 -11.74 L236.25 -9.03 L242.26 -9.03 L242.26 -6.18 L236.25 -6.18 L236.25 -2.84 L242.85 -2.84 L242.85 -0.00 L232.49 -0.00 L232.49 -14.58 Z M255.49 -8.12 Q256.67 -8.12 257.18 -8.55 Q257.69 -8.99 257.69 -10.00 Q257.69 -11.00 257.18 -11.43 Q256.67 -11.86 255.49 -11.86 L253.91 -11.86 L253.91 -8.12 L255.49 -8.12 Z M253.91 -5.52 L253.91 -0.00 L250.15 -0.00 L250.15 -14.58 L255.89 -14.58 Q258.77 -14.58 260.11 -13.61 Q261.45 -12.65 261.45 -10.56 Q261.45 -9.11 260.75 -8.18 Q260.06 -7.26 258.65 -6.82 Q259.42 -6.64 260.03 -6.02 Q260.64 -5.40 261.27 -4.14 L263.31 -0.00 L259.31 -0.00 L257.53 -3.62 Q256.99 -4.72 256.44 -5.12 Q255.89 -5.52 254.97 -5.52 L253.91 -5.52 Z M269.54 -14.58 L279.69 -14.58 L279.69 -11.74 L273.30 -11.74 L273.30 -9.03 L279.31 -9.03 L279.31 -6.18 L273.30 -6.18 L273.30 -2.84 L279.90 -2.84 L279.90 -0.00 L269.54 -0.00 L269.54 -14.58 Z M287.20 -14.58 L290.96 -14.58 L290.96 -0.00 L287.20 -0.00 L287.20 -14.58 Z M296.89 -14.58 L310.33 -14.58 L310.33 -11.74 L305.50 -11.74 L305.50 -0.00 L301.74 -0.00 L301.74 -11.74 L296.89 -11.74 L296.89 -14.58 Z M316.27 -14.58 L320.03 -14.58 L320.03 -5.84 Q320.03 -4.03 320.62 -3.26 Q321.21 -2.48 322.55 -2.48 Q323.90 -2.48 324.49 -3.26 Q325.08 -4.03 325.08 -5.84 L325.08 -14.58 L328.84 -14.58 L328.84 -5.84 Q328.84 -2.74 327.28 -1.23 Q325.73 0.28 322.55 0.28 Q319.37 0.28 317.82 -1.23 Q316.27 -2.74 316.27 -5.84 L316.27 -14.58 Z M336.51 -14.58 L340.70 -14.58 L346.01 -4.58 L346.01 -14.58 L349.57 -14.58 L349.57 -0.00 L345.37 -0.00 L340.07 -10.00 L340.07 -0.00 L336.51 -0.00 L336.51 -14.58 Z M370.34 -1.08 Q368.93 -0.40 367.42 -0.06 Q365.91 0.28 364.30 0.28 Q360.65 0.28 358.53 -1.75 Q356.40 -3.79 356.40 -7.28 Q356.40 -10.80 358.56 -12.82 Q360.73 -14.84 364.50 -14.84 Q365.96 -14.84 367.29 -14.57 Q368.62 -14.30 369.80 -13.76 L369.80 -10.74 Q368.58 -11.43 367.38 -11.78 Q366.17 -12.12 364.96 -12.12 Q362.72 -12.12 361.50 -10.86 Q360.28 -9.61 360.28 -7.28 Q360.28 -4.96 361.46 -3.70 Q362.63 -2.44 364.78 -2.44 Q365.37 -2.44 365.88 -2.51 Q366.38 -2.59 366.78 -2.74 L366.78 -5.58 L364.48 -5.58 L364.48 -8.10 L370.34 -8.10 L370.34 -1.08 Z"/>
+</svg></a>
+        <p>Professionelle Fahrzeugaufbereitung in Schwabhausen &amp; Umgebung – individuell, sorgfältig und mit Premium-Produkten.</p>
+      </div>
+      <div>
+        <h4>Leistungen</h4>
+        <a href="lackaufbereitung.html">Lackaufbereitung</a>
+        <a href="smart-repair.html">Smart Repair &amp; Service</a>
+        <a href="leasingrueckgabe.html">Leasingrückgabe</a>
+        <a href="pakete.html">Pakete &amp; Preise</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="#leistungen">Alle Leistungen</a>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <a href="tel:+4917669681866">0176 69681866</a>
+        <a href="mailto:info@fb-fahrzeugaufbereitung.de">info@fb-fahrzeugaufbereitung.de</a>
+        <a href="https://wa.me/4917669681866" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/fb_fahrzeugaufbereitung" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> FB Fahrzeugaufbereitung. Alle Rechte vorbehalten.</span>
+      <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="floating">
+  <a href="https://wa.me/4917669681866" class="fab fab-wa" target="_blank" rel="noopener" aria-label="WhatsApp schreiben">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.5 1.1 2.6c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.1.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2m0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.3 8.3 0 1 1 12 20.3"/></svg>
+  </a>
+  <a href="#kontakt" class="fab fab-primary" aria-label="Termin anfragen">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    <span>Termin anfragen</span>
+  </a>
+</div>
+
+<script>
+  // Mobile nav
+  var burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+  burger.addEventListener('click',function(){links.classList.toggle('open');});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');});});
+
+  // Year
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // DSGVO-freundliche Karte: lädt erst nach Klick
+  function ladeKarte(){
+    var c=document.getElementById('mapConsent');if(!c)return;
+    var f=document.createElement('iframe');
+    f.title='Standort FB Fahrzeugaufbereitung – Münchener Straße 4, 85247 Schwabhausen';
+    f.src='https://maps.google.com/maps?q=M%C3%BCnchener%20Stra%C3%9Fe%204%2C%2085247%20Schwabhausen&z=15&output=embed';
+    f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';
+    f.style.cssText='width:100%;height:380px;border:0;display:block';
+    c.replaceWith(f);
+  }
+  window.ladeKarte=ladeKarte;
+
+  // Kontaktformular -> FormSubmit (versendet per E-Mail, kein PHP nötig)
+  var form=document.getElementById('contactForm'),msg=document.getElementById('formMsg');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    msg.className='form-msg';
+    var data=new FormData(form);
+    fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+      .then(function(r){return r.json().catch(function(){return{ok:r.ok};});})
+      .then(function(res){
+        if(res && (res.success===true||res.success==='true'||res.ok)){
+          msg.className='form-msg ok';
+          msg.textContent='Vielen Dank! Deine Anfrage wurde gesendet – wir melden uns bald bei dir.';
+          form.reset();
+        }else{
+          throw new Error('fail');
+        }
+      })
+      .catch(function(){
+        msg.className='form-msg err';
+        msg.innerHTML='Das Senden hat nicht geklappt. Bitte ruf uns an oder schreib an <a href="mailto:info@fb-fahrzeugaufbereitung.de">info@fb-fahrzeugaufbereitung.de</a>.';
+      });
+  });
+</script>
+</body>
+</html>
