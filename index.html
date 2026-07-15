@@ -63,8 +63,8 @@
   .brand-head .logo-svg{height:42px;width:auto;display:block;color:var(--text)}
   .brand-foot .logo-svg{height:92px;width:auto;display:block;color:var(--text)}
   .brand-fallback{display:inline-flex;align-items:center;gap:11px}
-  .nav-links{display:flex;gap:30px;align-items:center}
-  .nav-links a{color:var(--muted);font-weight:500;font-size:.96rem;transition:color .15s}
+  .nav-links{display:flex;gap:19px;align-items:center}
+  .nav-links a{color:var(--muted);font-weight:500;font-size:.94rem;white-space:nowrap;transition:color .15s}
   .nav-links a:hover{color:var(--text)}
   .nav-cta{display:flex;gap:10px;align-items:center}
   .burger{display:none;background:none;border:0;color:var(--text);cursor:pointer;padding:8px}
@@ -459,6 +459,7 @@
       <a href="#preise">Preise</a>
       <a href="#ueber-uns">Über uns</a>
       <a href="galerie.html">Galerie</a>
+      <a href="einsatzorte.html">Einsatzorte</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
     <div class="nav-cta">
@@ -796,7 +797,7 @@
       </div>
     </div>
 
-    <form id="contactForm" action="https://formsubmit.co/ajax/info@fb-fahrzeugaufbereitung.de" method="post">
+    <form id="contactForm" action="https://fa-fahrzeugaufbereitung.de/kontakt.php" method="post">
       <div class="form-msg" id="formMsg"></div>
       <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
       <input type="hidden" name="_subject" value="Neue Anfrage über die Website – FB Fahrzeugaufbereitung">
@@ -862,6 +863,7 @@
         <a href="leasingrueckgabe.html">Leasingrückgabe</a>
         <a href="pakete.html">Pakete &amp; Preise</a>
         <a href="galerie.html">Galerie</a>
+        <a href="einsatzorte.html">Einsatzorte</a>
         <a href="#leistungen">Alle Leistungen</a>
       </div>
       <div>
@@ -910,7 +912,7 @@
   }
   window.ladeKarte=ladeKarte;
 
-  // Kontaktformular -> FormSubmit (versendet per E-Mail, kein PHP nötig)
+  // Kontaktformular -> kontakt.php auf fa-fahrzeugaufbereitung.de (Strato-Mailversand an info@fb-...)
   var form=document.getElementById('contactForm'),msg=document.getElementById('formMsg');
   form.addEventListener('submit',function(e){
     e.preventDefault();

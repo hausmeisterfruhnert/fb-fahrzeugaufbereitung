@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Einsatzorte – Fahrzeugaufbereitung im Raum Schwabhausen, Dachau &amp; München | FB</title>
+<meta name="description" content="Unsere Einsatzorte für Fahrzeug- &amp; Autoaufbereitung: Schwabhausen, Dachau, Karlsfeld, Olching, Fürstenfeldbruck, München und viele weitere Orte im Landkreis Dachau und Raum München.">
+<meta name="theme-color" content="#0e0e11">
+<style>
+  :root{--bg:#0e0e11;--bg-2:#15151a;--card:#191920;--card-2:#1f1f27;--line:rgba(255,255,255,.08);
+    --text:#f4f4f6;--muted:#a6a6b2;--accent:#e11d2a;--accent-2:#ff3b48;--radius:16px;--maxw:1000px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);
+    color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;z-index:50;background:rgba(14,14,17,.82);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;padding:12px 22px;
+    border-radius:999px;border:1px solid transparent;transition:transform .15s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;
+    box-shadow:0 12px 28px rgba(225,29,42,.35)}
+  .btn-ghost{background:rgba(255,255,255,.05);border-color:var(--line);color:var(--text)}
+  .hero{position:relative;padding:70px 0 40px;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(600px 320px at 82% 0%,rgba(225,29,42,.22),transparent 60%)}
+  .hero .wrap{position:relative}
+  .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:14px}
+  h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:900;letter-spacing:-.02em;margin-bottom:16px}
+  .lead{color:var(--muted);font-size:1.12rem;max-width:680px}
+  main{padding:20px 0 40px}
+  section.block{padding:26px 0}
+  h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;letter-spacing:-.01em;margin-bottom:12px}
+  h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+  p{color:var(--muted);margin-bottom:14px;max-width:760px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}
+  .info{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .info h3{color:var(--text)}
+  .info p{margin-bottom:0}
+  .info .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+    background:rgba(225,29,42,.12);color:var(--accent)}
+  .info .ic svg{width:24px;height:24px}
+  .note{background:var(--bg-2);border:1px solid var(--line);border-left:3px solid var(--accent);
+    border-radius:12px;padding:20px 22px;margin-top:24px}
+  .note p{color:var(--text);margin-bottom:0}
+  .cta{background:linear-gradient(160deg,#1c1c24,#121217);border:1px solid var(--line);border-radius:22px;
+    padding:40px;text-align:center;margin:40px 0 10px}
+  .cta h2{margin-bottom:10px}
+  .cta p{margin:0 auto 22px}
+  footer{border-top:1px solid var(--line);padding:30px 0 110px;color:var(--muted);font-size:.88rem}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
+  .foot a{color:var(--muted)}
+  .foot a:hover{color:var(--text)}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}.nav .btn-ghost{display:none}}
+  .floating{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+  .fab{display:inline-flex;align-items:center;gap:9px;font-weight:700;border-radius:999px;box-shadow:0 12px 30px rgba(0,0,0,.45);transition:transform .15s}
+  .fab:hover{transform:translateY(-2px)}
+  .fab-wa{width:58px;height:58px;justify-content:center;background:#25D366;color:#0a2a16}
+  .fab-wa svg{width:30px;height:30px}
+  .fab-primary{padding:15px 24px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff}
+  .fab-primary svg{width:20px;height:20px}
+  @media(max-width:640px){.fab-primary span{display:none}.fab-primary{width:58px;height:58px;justify-content:center;padding:0}}
+</style>
+<style>.ortgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}.ort{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:2px;transition:transform .15s,border-color .2s}.ort:hover{transform:translateY(-2px);border-color:var(--accent)}.ort b{font-size:1.08rem}.ort span{color:var(--muted);font-size:.85rem}@media(max-width:760px){.ortgrid{grid-template-columns:1fr 1fr}}@media(max-width:480px){.ortgrid{grid-template-columns:1fr}}</style>
+<meta name="author" content="FB Fahrzeugaufbereitung – Andreas Fruhnert">
+<meta name="geo.region" content="DE-BY">
+<meta name="geo.placename" content="Schwabhausen">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://www.fb-fahrzeugaufbereitung.de/einsatzorte.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FB Fahrzeugaufbereitung">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Einsatzorte – Fahrzeugaufbereitung im Raum Schwabhausen, Dachau &amp; München | FB">
+<meta property="og:description" content="Unsere Einsatzorte für Fahrzeug- &amp; Autoaufbereitung: Schwabhausen, Dachau, Karlsfeld, Olching, Fürstenfeldbruck, München und viele weitere Orte im Landkreis Dachau und Raum München.">
+<meta property="og:url" content="https://www.fb-fahrzeugaufbereitung.de/einsatzorte.html">
+<meta property="og:image" content="https://www.fb-fahrzeugaufbereitung.de/fb-porsche-911.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://www.fb-fahrzeugaufbereitung.de/"},{"@type":"ListItem","position":2,"name":"Einsatzorte","item":"https://www.fb-fahrzeugaufbereitung.de/einsatzorte.html"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" aria-label="FB Fahrzeugaufbereitung"><svg style="height:40px;width:auto;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457 119" fill="#ffffff" role="img" aria-label="FB Fahrzeugaufbereitung">
+<path transform="translate(21.55 93.07) scale(1.0000)" d="M8.45 -67.07 L55.11 -67.07 L55.11 -53.99 L25.75 -53.99 L25.75 -41.52 L53.37 -41.52 L53.37 -28.43 L25.75 -28.43 L25.75 -0.00 L8.45 -0.00 L8.45 -67.07 Z M98.15 -41.10 Q102.25 -41.10 104.35 -42.90 Q106.46 -44.69 106.46 -48.20 Q106.46 -51.66 104.35 -53.48 Q102.25 -55.30 98.15 -55.30 L88.59 -55.30 L88.59 -41.10 L98.15 -41.10 Z M98.74 -11.77 Q103.94 -11.77 106.57 -13.97 Q109.21 -16.17 109.21 -20.61 Q109.21 -24.98 106.60 -27.15 Q104.00 -29.34 98.74 -29.34 L88.59 -29.34 L88.59 -11.77 L98.74 -11.77 Z M114.83 -35.89 Q120.39 -34.27 123.44 -29.91 Q126.50 -25.56 126.50 -19.23 Q126.50 -9.53 119.94 -4.76 Q113.39 -0.00 99.99 -0.00 L71.30 -0.00 L71.30 -67.07 L97.26 -67.07 Q111.23 -67.07 117.50 -62.85 Q123.77 -58.62 123.77 -49.32 Q123.77 -44.43 121.47 -41.00 Q119.18 -37.56 114.83 -35.89 Z"/>
+<path d="M150.05 23.00 L151.74 32.30 L161.05 34.00 L151.74 35.70 L150.05 45.00 L148.35 35.70 L139.05 34.00 L148.35 32.30 Z"/>
+<rect x="182.0" y="32.0" width="3" height="55.1" rx="1.5"/>
+<path transform="translate(201.66 52.17) scale(1.0000)" d="M2.39 -18.96 L15.58 -18.96 L15.58 -15.26 L7.28 -15.26 L7.28 -11.73 L15.08 -11.73 L15.08 -8.04 L7.28 -8.04 L7.28 -0.00 L2.39 -0.00 L2.39 -18.96 Z M28.66 -3.45 L21.02 -3.45 L19.81 -0.00 L14.90 -0.00 L21.92 -18.96 L27.75 -18.96 L34.77 -0.00 L29.85 -0.00 L28.66 -3.45 Z M22.24 -6.97 L27.43 -6.97 L24.84 -14.51 L22.24 -6.97 Z M37.28 -18.96 L42.17 -18.96 L42.17 -11.73 L49.38 -11.73 L49.38 -18.96 L54.27 -18.96 L54.27 -0.00 L49.38 -0.00 L49.38 -8.04 L42.17 -8.04 L42.17 -0.00 L37.28 -0.00 L37.28 -18.96 Z M65.98 -10.55 Q67.52 -10.55 68.19 -11.12 Q68.85 -11.69 68.85 -13.00 Q68.85 -14.30 68.19 -14.85 Q67.52 -15.41 65.98 -15.41 L63.93 -15.41 L63.93 -10.55 L65.98 -10.55 Z M63.93 -7.17 L63.93 -0.00 L59.04 -0.00 L59.04 -18.96 L66.50 -18.96 Q70.25 -18.96 71.99 -17.70 Q73.74 -16.44 73.74 -13.72 Q73.74 -11.85 72.83 -10.64 Q71.92 -9.43 70.10 -8.86 Q71.10 -8.63 71.89 -7.82 Q72.69 -7.02 73.50 -5.38 L76.15 -0.00 L70.95 -0.00 L68.64 -4.71 Q67.94 -6.13 67.22 -6.65 Q66.50 -7.17 65.31 -7.17 L63.93 -7.17 Z M78.13 -18.96 L94.06 -18.96 L94.06 -16.00 L83.90 -3.69 L94.36 -3.69 L94.36 -0.00 L77.84 -0.00 L77.84 -2.96 L88.01 -15.26 L78.13 -15.26 L78.13 -18.96 Z M97.91 -18.96 L111.10 -18.96 L111.10 -15.26 L102.80 -15.26 L102.80 -11.73 L110.61 -11.73 L110.61 -8.04 L102.80 -8.04 L102.80 -3.69 L111.38 -3.69 L111.38 -0.00 L97.91 -0.00 L97.91 -18.96 Z M115.68 -18.96 L120.56 -18.96 L120.56 -7.59 Q120.56 -5.24 121.33 -4.23 Q122.10 -3.23 123.84 -3.23 Q125.59 -3.23 126.36 -4.23 Q127.12 -5.24 127.12 -7.59 L127.12 -18.96 L132.01 -18.96 L132.01 -7.59 Q132.01 -3.57 129.99 -1.60 Q127.98 0.37 123.84 0.37 Q119.71 0.37 117.69 -1.60 Q115.68 -3.57 115.68 -7.59 L115.68 -18.96 Z M153.82 -1.41 Q151.99 -0.52 150.03 -0.07 Q148.06 0.37 145.96 0.37 Q141.23 0.37 138.46 -2.28 Q135.69 -4.93 135.69 -9.46 Q135.69 -14.04 138.51 -16.67 Q141.33 -19.30 146.23 -19.30 Q148.12 -19.30 149.85 -18.94 Q151.59 -18.59 153.12 -17.89 L153.12 -13.97 Q151.54 -14.86 149.97 -15.31 Q148.40 -15.75 146.83 -15.75 Q143.91 -15.75 142.33 -14.12 Q140.75 -12.49 140.75 -9.46 Q140.75 -6.45 142.27 -4.81 Q143.80 -3.17 146.60 -3.17 Q147.36 -3.17 148.02 -3.27 Q148.67 -3.36 149.19 -3.57 L149.19 -7.25 L146.20 -7.25 L146.20 -10.53 L153.82 -10.53 L153.82 -1.41 Z"/>
+<path transform="translate(203.92 85.83) scale(1.0000)" d="M13.89 -3.45 L6.25 -3.45 L5.04 -0.00 L0.13 -0.00 L7.15 -18.96 L12.98 -18.96 L20.00 -0.00 L15.08 -0.00 L13.89 -3.45 Z M7.47 -6.97 L12.66 -6.97 L10.07 -14.51 L7.47 -6.97 Z M21.70 -18.96 L26.59 -18.96 L26.59 -7.59 Q26.59 -5.24 27.35 -4.23 Q28.12 -3.23 29.86 -3.23 Q31.61 -3.23 32.38 -4.23 Q33.15 -5.24 33.15 -7.59 L33.15 -18.96 L38.03 -18.96 L38.03 -7.59 Q38.03 -3.57 36.01 -1.60 Q34.00 0.37 29.86 0.37 Q25.73 0.37 23.71 -1.60 Q21.70 -3.57 21.70 -7.59 L21.70 -18.96 Z M42.81 -18.96 L56.00 -18.96 L56.00 -15.26 L47.70 -15.26 L47.70 -11.73 L55.51 -11.73 L55.51 -8.04 L47.70 -8.04 L47.70 -0.00 L42.81 -0.00 L42.81 -18.96 Z M68.16 -11.61 Q69.32 -11.61 69.91 -12.12 Q70.51 -12.63 70.51 -13.62 Q70.51 -14.60 69.91 -15.11 Q69.32 -15.63 68.16 -15.63 L65.46 -15.63 L65.46 -11.61 L68.16 -11.61 Z M68.33 -3.33 Q69.80 -3.33 70.54 -3.95 Q71.28 -4.57 71.28 -5.83 Q71.28 -7.06 70.55 -7.67 Q69.81 -8.29 68.33 -8.29 L65.46 -8.29 L65.46 -3.33 L68.33 -3.33 Z M72.87 -10.14 Q74.44 -9.69 75.31 -8.45 Q76.17 -7.22 76.17 -5.44 Q76.17 -2.69 74.32 -1.34 Q72.47 -0.00 68.68 -0.00 L60.57 -0.00 L60.57 -18.96 L67.91 -18.96 Q71.86 -18.96 73.63 -17.76 Q75.40 -16.57 75.40 -13.94 Q75.40 -12.56 74.75 -11.59 Q74.10 -10.62 72.87 -10.14 Z M80.39 -18.96 L93.58 -18.96 L93.58 -15.26 L85.28 -15.26 L85.28 -11.73 L93.08 -11.73 L93.08 -8.04 L85.28 -8.04 L85.28 -3.69 L93.86 -3.69 L93.86 -0.00 L80.39 -0.00 L80.39 -18.96 Z M105.09 -10.55 Q106.63 -10.55 107.29 -11.12 Q107.96 -11.69 107.96 -13.00 Q107.96 -14.30 107.29 -14.85 Q106.63 -15.41 105.09 -15.41 L103.04 -15.41 L103.04 -10.55 L105.09 -10.55 Z M103.04 -7.17 L103.04 -0.00 L98.15 -0.00 L98.15 -18.96 L105.61 -18.96 Q109.36 -18.96 111.10 -17.70 Q112.85 -16.44 112.85 -13.72 Q112.85 -11.85 111.94 -10.64 Q111.03 -9.43 109.20 -8.86 Q110.21 -8.63 111.00 -7.82 Q111.80 -7.02 112.61 -5.38 L115.26 -0.00 L110.06 -0.00 L107.75 -4.71 Q107.05 -6.13 106.33 -6.65 Q105.61 -7.17 104.42 -7.17 L103.04 -7.17 Z M118.17 -18.96 L131.36 -18.96 L131.36 -15.26 L123.06 -15.26 L123.06 -11.73 L130.87 -11.73 L130.87 -8.04 L123.06 -8.04 L123.06 -3.69 L131.64 -3.69 L131.64 -0.00 L118.17 -0.00 L118.17 -18.96 Z M135.93 -18.96 L140.82 -18.96 L140.82 -0.00 L135.93 -0.00 L135.93 -18.96 Z M143.34 -18.96 L160.81 -18.96 L160.81 -15.26 L154.53 -15.26 L154.53 -0.00 L149.64 -0.00 L149.64 -15.26 L143.34 -15.26 L143.34 -18.96 Z M163.34 -18.96 L168.23 -18.96 L168.23 -7.59 Q168.23 -5.24 168.99 -4.23 Q169.76 -3.23 171.50 -3.23 Q173.25 -3.23 174.02 -4.23 Q174.79 -5.24 174.79 -7.59 L174.79 -18.96 L179.68 -18.96 L179.68 -7.59 Q179.68 -3.57 177.66 -1.60 Q175.64 0.37 171.50 0.37 Q167.37 0.37 165.35 -1.60 Q163.34 -3.57 163.34 -7.59 L163.34 -18.96 Z M184.45 -18.96 L189.91 -18.96 L196.80 -5.96 L196.80 -18.96 L201.44 -18.96 L201.44 -0.00 L195.98 -0.00 L189.08 -13.00 L189.08 -0.00 L184.45 -0.00 L184.45 -18.96 Z M223.25 -1.41 Q221.42 -0.52 219.45 -0.07 Q217.49 0.37 215.39 0.37 Q210.65 0.37 207.89 -2.28 Q205.12 -4.93 205.12 -9.46 Q205.12 -14.04 207.93 -16.67 Q210.75 -19.30 215.66 -19.30 Q217.55 -19.30 219.28 -18.94 Q221.01 -18.59 222.55 -17.89 L222.55 -13.97 Q220.96 -14.86 219.39 -15.31 Q217.83 -15.75 216.25 -15.75 Q213.33 -15.75 211.75 -14.12 Q210.17 -12.49 210.17 -9.46 Q210.17 -6.45 211.70 -4.81 Q213.22 -3.17 216.02 -3.17 Q216.79 -3.17 217.44 -3.27 Q218.09 -3.36 218.61 -3.57 L218.61 -7.25 L215.63 -7.25 L215.63 -10.53 L223.25 -10.53 L223.25 -1.41 Z"/>
+</svg></a>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a href="index.html" class="btn btn-ghost">← Startseite</a>
+      <a href="index.html#kontakt" class="btn btn-primary">Termin anfragen</a>
+    </div>
+  </div>
+</header>
+<main>
+<section class="hero"><div class="wrap">
+  <span class="eyebrow">Einsatzorte</span>
+  <h1>Fahrzeugaufbereitung im Raum Schwabhausen &amp; München</h1>
+  <p class="lead">Unser Standort ist in Schwabhausen im Landkreis Dachau. Von hier aus sind wir für Kundinnen und Kunden aus der ganzen Region da – wähle deinen Ort und erfahre mehr über Autoaufbereitung bei dir in der Nähe.</p>
+</div></section>
+<div class="wrap">
+  <section class="block">
+    <h2>Unsere Einsatzorte im Überblick</h2>
+    <p>Von Dachau über den ganzen Landkreis bis in den Raum München und den Landkreis Fürstenfeldbruck – klick auf deinen Ort:</p>
+    <div class="ortgrid"><a class="ort" href="fahrzeugaufbereitung-dachau.html"><b>Dachau</b><span>Landkreis Dachau</span></a><a class="ort" href="fahrzeugaufbereitung-karlsfeld.html"><b>Karlsfeld</b><span>Landkreis Dachau</span></a><a class="ort" href="fahrzeugaufbereitung-bergkirchen.html"><b>Bergkirchen</b><span>Landkreis Dachau</span></a><a class="ort" href="fahrzeugaufbereitung-roehrmoos.html"><b>Röhrmoos</b><span>Landkreis Dachau</span></a><a class="ort" href="fahrzeugaufbereitung-hebertshausen.html"><b>Hebertshausen</b><span>Landkreis Dachau</span></a><a class="ort" href="fahrzeugaufbereitung-markt-indersdorf.html"><b>Markt Indersdorf</b><span>Landkreis Dachau</span></a><a class="ort" href="fahrzeugaufbereitung-vierkirchen.html"><b>Vierkirchen</b><span>Landkreis Dachau</span></a><a class="ort" href="fahrzeugaufbereitung-petershausen.html"><b>Petershausen</b><span>Landkreis Dachau</span></a><a class="ort" href="fahrzeugaufbereitung-odelzhausen.html"><b>Odelzhausen</b><span>Landkreis Dachau</span></a><a class="ort" href="fahrzeugaufbereitung-olching.html"><b>Olching</b><span>Landkreis Fürstenfeldbruck</span></a><a class="ort" href="fahrzeugaufbereitung-fuerstenfeldbruck.html"><b>Fürstenfeldbruck</b><span>Landkreis Fürstenfeldbruck</span></a><a class="ort" href="fahrzeugaufbereitung-groebenzell.html"><b>Gröbenzell</b><span>Landkreis Fürstenfeldbruck</span></a><a class="ort" href="fahrzeugaufbereitung-puchheim.html"><b>Puchheim</b><span>Landkreis Fürstenfeldbruck</span></a><a class="ort" href="fahrzeugaufbereitung-muenchen.html"><b>München</b><span>Stadt München</span></a></div>
+  </section>
+  <div class="cta">
+    <h2>Dein Ort ist nicht dabei?</h2>
+    <p class="lead" style="color:var(--muted)">Kein Problem – wir sind für den gesamten Raum Schwabhausen, Dachau und München da. Frag einfach unverbindlich an.</p>
+    <a href="index.html#kontakt" class="btn btn-primary">Jetzt Termin anfragen</a>
+  </div>
+</div>
+</main>
+<footer><div class="wrap foot">
+  <span>© <span id="y"></span> FB Fahrzeugaufbereitung · Schwabhausen</span>
+  <span><a href="index.html">Startseite</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<div class="floating">
+  <a href="https://wa.me/4917669681866" class="fab fab-wa" target="_blank" rel="noopener" aria-label="WhatsApp schreiben"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.5 1.1 2.6c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.1.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2m0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.3 8.3 0 1 1 12 20.3"/></svg></a>
+  <a href="index.html#kontakt" class="fab fab-primary" aria-label="Termin anfragen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Termin anfragen</span></a>
+</div>
+</body>
+</html>
